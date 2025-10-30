@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - Clínica Dental Sonrisa Perfecta</title>
+    <meta name="description" content="Descubre todos nuestros servicios dentales de alta calidad. Desde limpieza hasta implantes, cuidamos tu sonrisa.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <style>
+        :root {
+            --primary-color: #4A90E2;
+            --secondary-color: #7ED4E8;
+            --accent-color: #2C3E50;
+            --bg-color: #F8FAFB;
+            --text-color: #2C3E50;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(74, 144, 226, 0.3);
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .navbar-blur {
+            backdrop-filter: blur(10px);
+            background: rgba(248, 250, 251, 0.9);
+        }
+        
+        .service-card {
+            background: linear-gradient(135deg, rgba(74, 144, 226, 0.05), rgba(126, 212, 232, 0.05));
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .nav-link:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 navbar-blur border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-2xl font-bold text-primary-color">Sonrisa Perfecta</h1>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="nav-link text-gray-700 hover:text-primary-color px-3 py-2 text-sm font-medium">Inicio</a>
+                        <a href="index.html#clinica" class="nav-link text-gray-700 hover:text-primary-color px-3 py-2 text-sm font-medium">Nuestra Clínica</a>
+                        <a href="servicios.html" class="nav-link text-primary-color px-3 py-2 text-sm font-medium">Servicios</a>
+                        <a href="index.html#consejos" class="nav-link text-gray-700 hover:text-primary-color px-3 py-2 text-sm font-medium">Consejos</a>
+                        <a href="contacto.html" class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-medium">Contacto</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-primary-color">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="nav-link block px-3 py-2 text-gray-700 hover:text-primary-color">Inicio</a>
+                <a href="index.html#clinica" class="nav-link block px-3 py-2 text-gray-700 hover:text-primary-color">Nuestra Clínica</a>
+                <a href="servicios.html" class="nav-link block px-3 py-2 text-primary-color font-medium">Servicios</a>
+                <a href="index.html#consejos" class="nav-link block px-3 py-2 text-gray-700 hover:text-primary-color">Consejos</a>
+                <a href="contacto.html" class="nav-link block px-3 py-2 text-primary-color font-medium">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg pt-24 pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="fade-in">
+                <h1 class="text-5xl font-bold text-white mb-6">
+                    Nuestros <span class="text-yellow-300">Servicios</span>
+                </h1>
+                <p class="text-xl text-blue-100 max-w-3xl mx-auto">
+                    Ofrecemos una amplia gama de tratamientos dentales utilizando la tecnología más avanzada 
+                    y las técnicas más modernas para garantizar los mejores resultados.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Limpieza Dental -->
+                <div class="service-card card-hover rounded-2xl p-8 border border-gray-200 fade-in">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-tooth text-3xl text-primary-color"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">Limpieza Dental</h3>
+                    <p class="text-gray-600 text-center mb-6 leading-relaxed">
+                        Limpieza profunda y profilaxis para mantener tus dientes sanos y eliminar 
+                        la placa bacteriana y el sarro acumulado.
+                    </p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Eliminación de sarro y placa
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Pulido dental
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Aplicación de flúor
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Revisión completa
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-primary-color mb-2">Desde €60</div>
+                        <a href="contacto.html" class="btn-primary text-white px-6 py-3 rounded-lg font-semibold inline-block hover:transform hover:scale-105 transition-all">
+                            Solicitar Cita
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Empastes -->
+                <div class="service-card card-hover rounded-2xl p-8 border border-gray-200 fade-in">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-fill-drip text-3xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">Empastes</h3>
+                    <p class="text-gray-600 text-center mb-6 leading-relaxed">
+                        Reparación de caries con materiales de última generación que se adaptan 
+                        perfectamente al color de tus dientes naturales.
+                    </p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Materiales estéticos
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Durabilidad garantizada
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Procedimiento indoloro
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Resultados naturales
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-primary-color mb-2">Desde €80</div>
+                        <a href="contacto.html" class="btn-primary text-white px-6 py-3 rounded-lg font-semibold inline-block hover:transform hover:scale-105 transition-all">
+                            Solicitar Cita
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Ortodoncia -->
+                <div class="service-card card-hover rounded-2xl p-8 border border-gray-200 fade-in">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-teeth text-3xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">Ortodoncia</h3>
+                    <p class="text-gray-600 text-center mb-6 leading-relaxed">
+                        Corrección de la posición de los dientes con brackets tradicionales o 
+                        ortodoncia invisible para una sonrisa perfecta.
+                    </p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Brackets metálicos
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Ortodoncia invisible
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Retenedores
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Seguimiento personalizado
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-primary-color mb-2">Desde €1200</div>
+                        <a href="contacto.html" class="btn-primary text-white px-6 py-3 rounded-lg font-semibold inline-block hover:transform hover:scale-105 transition-all">
+                            Solicitar Cita
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Implantes Dentales -->
+                <div class="service-card card-hover rounded-2xl p-8 border border-gray-200 fade-in">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-tooth text-3xl text-indigo-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">Implantes Dentales</h3>
+                    <p class="text-gray-600 text-center mb-6 leading-relaxed">
+                        Solución permanente para la pérdida de dientes con implantes de titanio 
+                        de alta calidad y máxima biocompatibilidad.
+                    </p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Titanio de grado médico
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Cirugía guiada
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Corona personalizada
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Garantía de por vida
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-primary-color mb-2">Desde €900</div>
+                        <a href="contacto.html" class="btn-primary text-white px-6 py-3 rounded-lg font-semibold inline-block hover:transform hover:scale-105 transition-all">
+                            Solicitar Cita
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Blanqueamiento -->
+                <div class="service-card card-hover rounded-2xl p-8 border border-gray-200 fade-in">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-snowflake text-3xl text-yellow-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">Blanqueamiento</h3>
+                    <p class="text-gray-600 text-center mb-6 leading-relaxed">
+                        Recupera el blanco natural de tus dientes con nuestros tratamientos 
+                        de blanqueamiento profesional seguros y efectivos.
+                    </p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Resultados inmediatos
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Sin sensibilidad
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Efecto duradero
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Tecnología LED
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-primary-color mb-2">Desde €300</div>
+                        <a href="contacto.html" class="btn-primary text-white px-6 py-3 rounded-lg font-semibold inline-block hover:transform hover:scale-105 transition-all">
+                            Solicitar Cita
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Endodoncia -->
+                <div class="service-card card-hover rounded-2xl p-8 border border-gray-200 fade-in">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-tooth text-3xl text-red-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">Endodoncia</h3>
+                    <p class="text-gray-600 text-center mb-6 leading-relaxed">
+                        Tratamiento de conductos radiculares para salvar dientes dañados 
+                        y aliviar el dolor de forma definitiva.
+                    </p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Microscopio dental
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Anestesia avanzada
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Tratamiento sin dolor
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Alta tasa de éxito
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-primary-color mb-2">Desde €250</div>
+                        <a href="contacto.html" class="btn-primary text-white px-6 py-3 rounded-lg font-semibold inline-block hover:transform hover:scale-105 transition-all">
+                            Solicitar Cita
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Periodoncia -->
+                <div class="service-card card-hover rounded-2xl p-8 border border-gray-200 fade-in">
+                    <div class="w-16 h-16 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-heart text-3xl text-teal-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">Periodoncia</h3>
+                    <p class="text-gray-600 text-center mb-6 leading-relaxed">
+                        Tratamiento de enfermedades de las encías y los tejidos de soporte 
+                        para mantener la salud periodontal.
+                    </p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Diagnóstico preciso
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Tratamiento no quirúrgico
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Cirugía periodontal
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Mantenimiento continuo
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-primary-color mb-2">Desde €150</div>
+                        <a href="contacto.html" class="btn-primary text-white px-6 py-3 rounded-lg font-semibold inline-block hover:transform hover:scale-105 transition-all">
+                            Solicitar Cita
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Odontopediatría -->
+                <div class="service-card card-hover rounded-2xl p-8 border border-gray-200 fade-in">
+                    <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-child text-3xl text-pink-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">Odontopediatría</h3>
+                    <p class="text-gray-600 text-center mb-6 leading-relaxed">
+                        Cuidado dental especializado para niños, con un enfoque preventivo 
+                        y educativo para crear hábitos saludables desde temprana edad.
+                    </p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Ambiente infantil
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Prevención de caries
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Frenillos de hábito
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Educación dental
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-primary-color mb-2">Desde €50</div>
+                        <a href="contacto.html" class="btn-primary text-white px-6 py-3 rounded-lg font-semibold inline-block hover:transform hover:scale-105 transition-all">
+                            Solicitar Cita
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Cirugía Oral -->
+                <div class="service-card card-hover rounded-2xl p-8 border border-gray-200 fade-in">
+                    <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-procedures text-3xl text-gray-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">Cirugía Oral</h3>
+                    <p class="text-gray-600 text-center mb-6 leading-relaxed">
+                        Procedimientos quirúrgicos especializados incluyendo extracciones de cordales 
+                        y otros tratamientos quirúrgicos bucales.
+                    </p>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Extracción de cordales
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Cirugía de impactación
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Sedación consciente
+                        </div>
+                        <div class="flex items-center text-sm text-gray-600">
+                            <i class="fas fa-check text-green-500 mr-2"></i>
+                            Postoperatorio cuidado
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-2xl font-bold text-primary-color mb-2">Desde €180</div>
+                        <a href="contacto.html" class="btn-primary text-white px-6 py-3 rounded-lg font-semibold inline-block hover:transform hover:scale-105 transition-all">
+                            Solicitar Cita
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Tecnología Avanzada</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Utilizamos la tecnología más avanzada para garantizar tratamientos precisos, 
+                    seguros y con los mejores resultados posibles.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="card-hover bg-white rounded-2xl p-8 text-center fade-in">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-x-ray text-3xl text-primary-color"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Radiografía Digital</h3>
+                    <p class="text-gray-600">
+                        Imágenes de alta resolución con menor exposición a radiación para diagnósticos precisos.
+                    </p>
+                </div>
+                
+                <div class="card-hover bg-white rounded-2xl p-8 text-center fade-in">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-microscope text-3xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Microscopio Dental</h3>
+                    <p class="text-gray-600">
+                        Visualización ampliada para tratamientos de precisión en endodoncia y cirugía.
+                    </p>
+                </div>
+                
+                <div class="card-hover bg-white rounded-2xl p-8 text-center fade-in">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-cube text-3xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Impresión 3D</h3>
+                    <p class="text-gray-600">
+                        Modelos digitales precisos para tratamientos personalizados y resultados óptimos.
+                    </p>
+                </div>
+                
+                <div class="card-hover bg-white rounded-2xl p-8 text-center fade-in">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-lightbulb text-3xl text-red-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Láser Dental</h3>
+                    <p class="text-gray-600">
+                        Tratamientos mínimamente invasivos con mayor precisión y menor tiempo de recuperación.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 hero-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="fade-in">
+                <h2 class="text-4xl font-bold text-white mb-6">
+                    ¿Listo para Comenzar?
+                </h2>
+                <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                    Agenda tu primera cita y recibe una evaluación completa gratuita. 
+                    Nuestro equipo está listo para ayudarte a alcanzar la sonrisa perfecta.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contacto.html" class="bg-white text-primary-color px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                        Primera Cita Gratuita
+                    </a>
+                    <a href="tel:+34912345678" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-color transition-colors">
+                        <i class="fas fa-phone mr-2"></i>
+                        Llamar Ahora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-2xl font-bold mb-4 text-primary-color">Sonrisa Perfecta</h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Tu salud bucal es nuestra prioridad. Ofrecemos tratamientos dentales de alta calidad 
+                        con tecnología avanzada y un equipo profesional dedicado a tu bienestar.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-primary-color transition-colors">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary-color transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary-color transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-white">Servicios</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-primary-color transition-colors">Limpieza Dental</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary-color transition-colors">Empastes</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary-color transition-colors">Ortodoncia</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary-color transition-colors">Implantes</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary-color transition-colors">Blanqueamiento</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-white">Contacto</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2 text-primary-color"></i>
+                            +34 912 345 678
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-primary-color"></i>
+                            info@sonrisaperfecta.es
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2 text-primary-color"></i>
+                            Calle Alcalá 123, Madrid
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">
+                    © 2024 Clínica Dental Sonrisa Perfecta. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-blur');
+            } else {
+                navbar.classList.remove('navbar-blur');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consejos de Salud Bucal - Clínica Dental Sonrisa Perfecta</title>
+    <meta name="description" content="Descubre consejos expertos para mantener tu salud bual. Aprende técnicas de cepillado, cuidado de encías y más.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <style>
+        :root {
+            --primary-color: #4A90E2;
+            --secondary-color: #7ED4E8;
+            --accent-color: #2C3E50;
+            --bg-color: #F8FAFB;
+            --text-color: #2C3E50;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(74, 144, 226, 0.3);
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .navbar-blur {
+            backdrop-filter: blur(10px);
+            background: rgba(248, 250, 251, 0.9);
+        }
+        
+        .tip-number {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        }
+        
+        .nav-link {
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .nav-link:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 navbar-blur border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <h1 class="text-2xl font-bold text-primary-color">Sonrisa Perfecta</h1>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="index.html" class="nav-link text-gray-700 hover:text-primary-color px-3 py-2 text-sm font-medium">Inicio</a>
+                        <a href="index.html#clinica" class="nav-link text-gray-700 hover:text-primary-color px-3 py-2 text-sm font-medium">Nuestra Clínica</a>
+                        <a href="servicios.html" class="nav-link text-gray-700 hover:text-primary-color px-3 py-2 text-sm font-medium">Servicios</a>
+                        <a href="index.html#consejos" class="nav-link text-gray-700 hover:text-primary-color px-3 py-2 text-sm font-medium">Consejos</a>
+                        <a href="contacto.html" class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-medium">Contacto</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-primary-color">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="nav-link block px-3 py-2 text-gray-700 hover:text-primary-color">Inicio</a>
+                <a href="index.html#clinica" class="nav-link block px-3 py-2 text-gray-700 hover:text-primary-color">Nuestra Clínica</a>
+                <a href="servicios.html" class="nav-link block px-3 py-2 text-gray-700 hover:text-primary-color">Servicios</a>
+                <a href="index.html#consejos" class="nav-link block px-3 py-2 text-gray-700 hover:text-primary-color">Consejos</a>
+                <a href="contacto.html" class="nav-link block px-3 py-2 text-primary-color font-medium">Contacto</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg pt-24 pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="fade-in">
+                <h1 class="text-5xl font-bold text-white mb-6">
+                    Consejos de <span class="text-yellow-300">Salud Bucal</span>
+                </h1>
+                <p class="text-xl text-blue-100 max-w-3xl mx-auto">
+                    Mantén tu sonrisa saludable y radiante con estos consejos expertos de nuestros profesionales. 
+                    Aprende las mejores prácticas para el cuidado diario de tus dientes y encías.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tip 1: Proper Brushing -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <div class="flex items-center mb-6">
+                        <div class="tip-number w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">1</div>
+                        <h2 class="text-3xl font-bold text-gray-900">Cepillado Correcto</h2>
+                    </div>
+                    
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        El cepillado adecuado es fundamental para mantener una buena salud bucal. La técnica correcta 
+                        elimina la placa bacteriana y previene caries y enfermedades de las encías.
+                    </p>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Duración Adecuada</h4>
+                                <p class="text-gray-600">Cepilla durante 2-3 minutos, no menos. Usa un temporizador si es necesario.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Movimientos Suaves</h4>
+                                <p class="text-gray-600">Usa movimientos circulares suaves, no fuerces demasiado para no dañar el esmalte.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Todas las Superficies</h4>
+                                <p class="text-gray-600">No olvides las superficies internas, externas y de masticación de todos los dientes.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Lengua y Encías</h4>
+                                <p class="text-gray-600">Cepilla suavemente tu lengua y las encías para eliminar bacterias y refrescar el aliento.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Video Tutorial -->
+                    <div class="bg-blue-50 rounded-xl p-6 border-l-4 border-primary-color">
+                        <h4 class="font-semibold text-gray-900 mb-3">
+                            <i class="fas fa-play-circle text-primary-color mr-2"></i>
+                            Video Tutorial: Cepillado Correcto
+                        </h4>
+                        <div class="bg-gray-200 rounded-lg h-48 flex items-center justify-center mb-3">
+                            <i class="fas fa-play text-primary-color text-4xl"></i>
+                        </div>
+                        <p class="text-sm text-gray-600">
+                            Duración: 3:45 minutos | Aprende la técnica paso a paso
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="fade-in">
+                    <img src="https://kimi-web-img.moonshot.cn/img/dentagama.com/4d38a7ea38e4b8c20016289c00de0657b1cb479a.PNG" 
+                         alt="Técnica de cepillado correcto" 
+                         class="rounded-2xl shadow-xl w-full h-96 object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tip 2: Dental Floss -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in order-2 lg:order-1">
+                    <img src="https://kimi-web-img.moonshot.cn/img/img.freepik.com/8c5b8e9f8c5b8e9f8c5b8e9f8c5b8e9f.jpg" 
+                         alt="Uso del hilo dental" 
+                         class="rounded-2xl shadow-xl w-full h-96 object-cover">
+                </div>
+                
+                <div class="fade-in order-1 lg:order-2">
+                    <div class="flex items-center mb-6">
+                        <div class="tip-number w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">2</div>
+                        <h2 class="text-3xl font-bold text-gray-900">Uso del Hilo Dental</h2>
+                    </div>
+                    
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        El hilo dental es esencial para limpiar el 40% de las superficies dentales que el cepillo 
+                        no alcanza. Su uso diario previene la caries interdental y enfermedades de las encías.
+                    </p>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Longitud Adecuada</h4>
+                                <p class="text-gray-600">Usa aproximadamente 45 cm de hilo dental para tener suficiente espacio entre los dedos.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Técnica de Enrollado</h4>
+                                <p class="text-gray-600">Enrolla los extremos alrededor de tus dedos medio, dejando 5-8 cm para trabajar.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Movimiento Suave</h4>
+                                <p class="text-gray-600">Desliza suavemente entre los dientes, forma una C alrededor de cada diente.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Sección Nueva</h4>
+                                <p class="text-gray-600">Usa una sección limpia de hilo dental para cada espacio entre dientes.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Video Tutorial -->
+                    <div class="bg-green-50 rounded-xl p-6 border-l-4 border-green-500">
+                        <h4 class="font-semibold text-gray-900 mb-3">
+                            <i class="fas fa-play-circle text-green-500 mr-2"></i>
+                            Video Tutorial: Uso Correcto del Hilo Dental
+                        </h4>
+                        <div class="bg-gray-200 rounded-lg h-48 flex items-center justify-center mb-3">
+                            <i class="fas fa-play text-green-500 text-4xl"></i>
+                        </div>
+                        <p class="text-sm text-gray-600">
+                            Duración: 2:30 minutos | Aprende la técnica profesional
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tip 3: Healthy Diet -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <div class="flex items-center mb-6">
+                        <div class="tip-number w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">3</div>
+                        <h2 class="text-3xl font-bold text-gray-900">Alimentación Saludable</h2>
+                    </div>
+                    
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        Tu dieta tiene un impacto directo en la salud de tus dientes y encías. Algunos alimentos 
+                        fortalecen el esmalte mientras que otros pueden causar daño significativo.
+                    </p>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                        <div class="bg-green-50 rounded-xl p-6">
+                            <h4 class="font-semibold text-green-800 mb-4">
+                                <i class="fas fa-thumbs-up text-green-600 mr-2"></i>
+                                Alimentos Beneficiosos
+                            </h4>
+                            <ul class="space-y-2 text-sm text-green-700">
+                                <li>• Lácteos (rico en calcio)</li>
+                                <li>• Verduras de hoja verde</li>
+                                <li>• Frutas frescas (manzanas, peras)</li>
+                                <li>• Carne magra y pescado</li>
+                                <li>• Nueces y semillas</li>
+                                <li>• Agua (especialmente con flúor)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-red-50 rounded-xl p-6">
+                            <h4 class="font-semibold text-red-800 mb-4">
+                                <i class="fas fa-thumbs-down text-red-600 mr-2"></i>
+                                Limitar o Evitar
+                            </h4>
+                            <ul class="space-y-2 text-sm text-red-700">
+                                <li>• Bebidas azucaradas</li>
+                                <li>• Caramelos y golosinas</li>
+                                <li>• Pan blanco y refinado</li>
+                                <li>• Cítricos en exceso</li>
+                                <li>• Café y té (mancha)</li>
+                                <li>• Alcohol (deshidratación)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Video Tutorial -->
+                    <div class="bg-purple-50 rounded-xl p-6 border-l-4 border-purple-500">
+                        <h4 class="font-semibold text-gray-900 mb-3">
+                            <i class="fas fa-play-circle text-purple-500 mr-2"></i>
+                            Video Tutorial: Alimentos para una Sonrisa Saludable
+                        </h4>
+                        <div class="bg-gray-200 rounded-lg h-48 flex items-center justify-center mb-3">
+                            <i class="fas fa-play text-purple-500 text-4xl"></i>
+                        </div>
+                        <p class="text-sm text-gray-600">
+                            Duración: 4:15 minutos | Guía completa de nutrición dental
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="fade-in">
+                    <img src="https://kimi-web-img.moonshot.cn/img/img.freepik.com/f11223344556677889900aabbccddeeff.jpg" 
+                         alt="Alimentos saludables para los dientes" 
+                         class="rounded-2xl shadow-xl w-full h-96 object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tip 4: Regular Visits -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in order-2 lg:order-1">
+                    <img src="https://kimi-web-img.moonshot.cn/img/310dentalcare.com/11414b390e6cdec086f54f36f58b3954148cd130.jpg" 
+                         alt="Consulta dental regular" 
+                         class="rounded-2xl shadow-xl w-full h-96 object-cover">
+                </div>
+                
+                <div class="fade-in order-1 lg:order-2">
+                    <div class="flex items-center mb-6">
+                        <div class="tip-number w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">4</div>
+                        <h2 class="text-3xl font-bold text-gray-900">Visitas Regulares</h2>
+                    </div>
+                    
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        Las visitas preventivas al dentista cada 6 meses son cruciales para detectar problemas 
+                        temprano y mantener una sonrisa saludable a largo plazo.
+                    </p>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Limpieza Profesional</h4>
+                                <p class="text-gray-600">Eliminación de sarro y placa que no se puede quitar con el cepillado doméstico.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Detección Temprana</h4>
+                                <p class="text-gray-600">Identificación de caries, problemas de encías y otros problemas antes de que empeoren.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Radiografías</h4>
+                                <p class="text-gray-600">Evaluación de problemas no visibles a simple vista, como caries entre dientes.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-900">Asesoramiento Personalizado</h4>
+                                <p class="text-gray-600">Recomendaciones específicas para tus necesidades de salud bucal.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Video Tutorial -->
+                    <div class="bg-orange-50 rounded-xl p-6 border-l-4 border-orange-500">
+                        <h4 class="font-semibold text-gray-900 mb-3">
+                            <i class="fas fa-play-circle text-orange-500 mr-2"></i>
+                            Video Tutorial: Qué Esperar en tu Visita Dental
+                        </h4>
+                        <div class="bg-gray-200 rounded-lg h-48 flex items-center justify-center mb-3">
+                            <i class="fas fa-play text-orange-500 text-4xl"></i>
+                        </div>
+                        <p class="text-sm text-gray-600">
+                            Duración: 5:30 minutos | Guía completa de la consulta dental
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Tips -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Consejos Adicionales</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Más recomendaciones de nuestros expertos para mantener tu sonrisa perfecta.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card-hover bg-gradient-to-br from-pink-50 to-rose-50 rounded-2xl p-8 fade-in">
+                    <div class="w-16 h-16 bg-pink-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-utensils text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Después de Comer</h3>
+                    <p class="text-gray-600 text-center mb-6">
+                        Enjuaga tu boca con agua después de cada comida para eliminar restos de alimentos 
+                        y neutralizar los ácidos.
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• Espera 30 minutos antes de cepillar</li>
+                        <li>• Usa enjuague bucal sin alcohol</li>
+                        <li>• Mastica chicle sin azúcar</li>
+                    </ul>
+                </div>
+                
+                <div class="card-hover bg-gradient-to-br from-indigo-50 to-blue-50 rounded-2xl p-8 fade-in">
+                    <div class="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-bed text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Cepillado Nocturno</h3>
+                    <p class="text-gray-600 text-center mb-6">
+                        El cepillado antes de dormir es el más importante del día, ya que la saliva 
+                        disminuye durante el sueño.
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• Cepilla justo antes de acostarte</li>
+                        <li>• No bebas nada después</li>
+                        <li>• Considera un protector nocturno</li>
+                    </ul>
+                </div>
+                
+                <div class="card-hover bg-gradient-to-br from-teal-50 to-cyan-50 rounded-2xl p-8 fade-in">
+                    <div class="w-16 h-16 bg-teal-500 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-shield-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 text-center">Protección Deportiva</h3>
+                    <p class="text-gray-600 text-center mb-6">
+                        Usa protectores bucales durante actividades deportivas de contacto 
+                        para prevenir lesiones dentales.
+                    </p>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• Protector personalizado es mejor</li>
+                        <li>• Límpialo después de cada uso</li>
+                        <li>• Reemplázalo cada temporada</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 hero-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="fade-in">
+                <h2 class="text-4xl font-bold text-white mb-6">
+                    ¿Necesitas Ayuda Personalizada?
+                </h2>
+                <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                    Cada sonrisa es única. Agenda una consulta para recibir consejos específicos 
+                    para tus necesidades de salud bucal.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contacto.html" class="bg-white text-primary-color px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                        Agendar Consulta
+                    </a>
+                    <a href="tel:+34912345678" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-color transition-colors">
+                        <i class="fas fa-phone mr-2"></i>
+                        Llamar Ahora
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-2xl font-bold mb-4 text-primary-color">Sonrisa Perfecta</h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Tu salud bucal es nuestra prioridad. Ofrecemos tratamientos dentales de alta calidad 
+                        con tecnología avanzada y un equipo profesional dedicado a tu bienestar.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-primary-color transition-colors">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary-color transition-colors">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-primary-color transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-white">Servicios</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-300 hover:text-primary-color transition-colors">Limpieza Dental</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary-color transition-colors">Empastes</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary-color transition-colors">Ortodoncia</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary-color transition-colors">Implantes</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-primary-color transition-colors">Blanqueamiento</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-white">Contacto</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2 text-primary-color"></i>
+                            +34 912 345 678
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-primary-color"></i>
+                            info@sonrisaperfecta.es
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2 text-primary-color"></i>
+                            Calle Alcalá 123, Madrid
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">
+                    © 2024 Clínica Dental Sonrisa Perfecta. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+        
+        // Navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                navbar.classList.add('navbar-blur');
+            } else {
+                navbar.classList.remove('navbar-blur');
+            }
+        });
+    </script>
+</body>
+</html>
