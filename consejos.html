@@ -70,8 +70,11 @@
         }
         
         .navbar-blur {
-            backdrop-filter: blur(10px);
-            background: rgba(248, 250, 251, 0.9);
+            background: #F3F4F6;
+        }
+        
+        nav {
+            background: #F3F4F6;
         }
         
         .tip-number {
@@ -105,7 +108,7 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 navbar-blur border-b border-gray-200">
+    <nav class="fixed top-0 w-full z-50 border-b border-gray-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
@@ -115,15 +118,15 @@
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="index.html" class="nav-link text-gray-700 hover:text-primary-color px-3 py-2 text-sm font-medium">Inicio</a>
-                        <a href="index.html#clinica" class="nav-link text-gray-700 hover:text-primary-color px-3 py-2 text-sm font-medium">Nuestra Clínica</a>
-                        <a href="servicios.html" class="nav-link text-gray-700 hover:text-primary-color px-3 py-2 text-sm font-medium">Servicios</a>
-                        <a href="index.html#consejos" class="nav-link text-gray-700 hover:text-primary-color px-3 py-2 text-sm font-medium">Consejos</a>
+                        <a href="index.html" class="nav-link text-gray-900 hover:text-primary-color px-3 py-2 text-sm font-medium">Inicio</a>
+                        <a href="index.html#clinica" class="nav-link text-gray-900 hover:text-primary-color px-3 py-2 text-sm font-medium">Nuestra Clínica</a>
+                        <a href="servicios.html" class="nav-link text-gray-900 hover:text-primary-color px-3 py-2 text-sm font-medium">Servicios</a>
+                        <a href="index.html#consejos" class="nav-link text-gray-900 hover:text-primary-color px-3 py-2 text-sm font-medium">Consejos</a>
                         <a href="contacto.html" class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-medium">Contacto</a>
                     </div>
                 </div>
                 <div class="md:hidden">
-                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-primary-color">
+                    <button id="mobile-menu-btn" class="text-gray-900 hover:text-primary-color">
                         <i class="fas fa-bars text-xl"></i>
                     </button>
                 </div>
@@ -131,12 +134,12 @@
         </div>
         
         <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-100 border-t border-gray-300">
             <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="index.html" class="nav-link block px-3 py-2 text-gray-700 hover:text-primary-color">Inicio</a>
-                <a href="index.html#clinica" class="nav-link block px-3 py-2 text-gray-700 hover:text-primary-color">Nuestra Clínica</a>
-                <a href="servicios.html" class="nav-link block px-3 py-2 text-gray-700 hover:text-primary-color">Servicios</a>
-                <a href="index.html#consejos" class="nav-link block px-3 py-2 text-gray-700 hover:text-primary-color">Consejos</a>
+                <a href="index.html" class="nav-link block px-3 py-2 text-gray-900 hover:text-primary-color">Inicio</a>
+                <a href="index.html#clinica" class="nav-link block px-3 py-2 text-gray-900 hover:text-primary-color">Nuestra Clínica</a>
+                <a href="servicios.html" class="nav-link block px-3 py-2 text-gray-900 hover:text-primary-color">Servicios</a>
+                <a href="index.html#consejos" class="nav-link block px-3 py-2 text-gray-900 hover:text-primary-color">Consejos</a>
                 <a href="contacto.html" class="nav-link block px-3 py-2 text-primary-color font-medium">Contacto</a>
             </div>
         </div>
@@ -205,26 +208,22 @@
                             </div>
                         </div>
                     </div>
-                    
+                </div>
+                
+                <div class="fade-in">
                     <!-- Video Tutorial -->
                     <div class="bg-blue-50 rounded-xl p-6 border-l-4 border-primary-color">
                         <h4 class="font-semibold text-gray-900 mb-3">
                             <i class="fas fa-play-circle text-primary-color mr-2"></i>
                             Video Tutorial: Cepillado Correcto
                         </h4>
-                        <div class="bg-gray-200 rounded-lg h-48 flex items-center justify-center mb-3">
+                        <div class="bg-gray-200 rounded-lg h-96 flex items-center justify-center mb-3">
                             <i class="fas fa-play text-primary-color text-4xl"></i>
                         </div>
                         <p class="text-sm text-gray-600">
                             Duración: 3:45 minutos | Aprende la técnica paso a paso
                         </p>
                     </div>
-                </div>
-                
-                <div class="fade-in">
-                    <img src="https://kimi-web-img.moonshot.cn/img/dentagama.com/4d38a7ea38e4b8c20016289c00de0657b1cb479a.PNG" 
-                         alt="Técnica de cepillado correcto" 
-                         class="rounded-2xl shadow-xl w-full h-96 object-cover">
                 </div>
             </div>
         </div>
@@ -234,12 +233,6 @@
     <section class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div class="fade-in order-2 lg:order-1">
-                    <img src="https://kimi-web-img.moonshot.cn/img/img.freepik.com/8c5b8e9f8c5b8e9f8c5b8e9f8c5b8e9f.jpg" 
-                         alt="Uso del hilo dental" 
-                         class="rounded-2xl shadow-xl w-full h-96 object-cover">
-                </div>
-                
                 <div class="fade-in order-1 lg:order-2">
                     <div class="flex items-center mb-6">
                         <div class="tip-number w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">2</div>
@@ -284,14 +277,16 @@
                             </div>
                         </div>
                     </div>
-                    
+                </div>
+                
+                <div class="fade-in order-2 lg:order-1">
                     <!-- Video Tutorial -->
                     <div class="bg-green-50 rounded-xl p-6 border-l-4 border-green-500">
                         <h4 class="font-semibold text-gray-900 mb-3">
                             <i class="fas fa-play-circle text-green-500 mr-2"></i>
                             Video Tutorial: Uso Correcto del Hilo Dental
                         </h4>
-                        <div class="bg-gray-200 rounded-lg h-48 flex items-center justify-center mb-3">
+                        <div class="bg-gray-200 rounded-lg h-96 flex items-center justify-center mb-3">
                             <i class="fas fa-play text-green-500 text-4xl"></i>
                         </div>
                         <p class="text-sm text-gray-600">
@@ -349,26 +344,22 @@
                             </ul>
                         </div>
                     </div>
-                    
+                </div>
+                
+                <div class="fade-in">
                     <!-- Video Tutorial -->
                     <div class="bg-purple-50 rounded-xl p-6 border-l-4 border-purple-500">
                         <h4 class="font-semibold text-gray-900 mb-3">
                             <i class="fas fa-play-circle text-purple-500 mr-2"></i>
                             Video Tutorial: Alimentos para una Sonrisa Saludable
                         </h4>
-                        <div class="bg-gray-200 rounded-lg h-48 flex items-center justify-center mb-3">
+                        <div class="bg-gray-200 rounded-lg h-96 flex items-center justify-center mb-3">
                             <i class="fas fa-play text-purple-500 text-4xl"></i>
                         </div>
                         <p class="text-sm text-gray-600">
                             Duración: 4:15 minutos | Guía completa de nutrición dental
                         </p>
                     </div>
-                </div>
-                
-                <div class="fade-in">
-                    <img src="https://kimi-web-img.moonshot.cn/img/img.freepik.com/f11223344556677889900aabbccddeeff.jpg" 
-                         alt="Alimentos saludables para los dientes" 
-                         class="rounded-2xl shadow-xl w-full h-96 object-cover">
                 </div>
             </div>
         </div>
@@ -378,12 +369,6 @@
     <section class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div class="fade-in order-2 lg:order-1">
-                    <img src="https://kimi-web-img.moonshot.cn/img/310dentalcare.com/11414b390e6cdec086f54f36f58b3954148cd130.jpg" 
-                         alt="Consulta dental regular" 
-                         class="rounded-2xl shadow-xl w-full h-96 object-cover">
-                </div>
-                
                 <div class="fade-in order-1 lg:order-2">
                     <div class="flex items-center mb-6">
                         <div class="tip-number w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">4</div>
@@ -428,14 +413,16 @@
                             </div>
                         </div>
                     </div>
-                    
+                </div>
+                
+                <div class="fade-in order-2 lg:order-1">
                     <!-- Video Tutorial -->
                     <div class="bg-orange-50 rounded-xl p-6 border-l-4 border-orange-500">
                         <h4 class="font-semibold text-gray-900 mb-3">
                             <i class="fas fa-play-circle text-orange-500 mr-2"></i>
                             Video Tutorial: Qué Esperar en tu Visita Dental
                         </h4>
-                        <div class="bg-gray-200 rounded-lg h-48 flex items-center justify-center mb-3">
+                        <div class="bg-gray-200 rounded-lg h-96 flex items-center justify-center mb-3">
                             <i class="fas fa-play text-orange-500 text-4xl"></i>
                         </div>
                         <p class="text-sm text-gray-600">
@@ -509,80 +496,24 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="py-20 hero-bg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div class="fade-in">
-                <h2 class="text-4xl font-bold text-white mb-6">
-                    ¿Necesitas Ayuda Personalizada?
-                </h2>
-                <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                    Cada sonrisa es única. Agenda una consulta para recibir consejos específicos 
-                    para tus necesidades de salud bucal.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="contacto.html" class="bg-white text-primary-color px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
-                        Agendar Consulta
-                    </a>
-                    <a href="tel:+34912345678" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-primary-color transition-colors">
-                        <i class="fas fa-phone mr-2"></i>
-                        Llamar Ahora
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div class="col-span-1 md:col-span-2">
-                    <h3 class="text-2xl font-bold mb-4 text-primary-color">Sonrisa Perfecta</h3>
-                    <p class="text-gray-300 mb-6 leading-relaxed">
-                        Tu salud bucal es nuestra prioridad. Ofrecemos tratamientos dentales de alta calidad 
-                        con tecnología avanzada y un equipo profesional dedicado a tu bienestar.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-primary-color transition-colors">
-                            <i class="fab fa-facebook-f text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-primary-color transition-colors">
-                            <i class="fab fa-instagram text-xl"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-primary-color transition-colors">
-                            <i class="fab fa-twitter text-xl"></i>
-                        </a>
+            <div class="text-center">
+                <h4 class="text-lg font-semibold mb-6 text-white">Contacto</h4>
+                <div class="flex flex-col items-center space-y-3 text-gray-300">
+                    <div class="flex items-center">
+                        <i class="fas fa-phone mr-3 text-primary-color"></i>
+                        <a href="tel:+34912345678" class="hover:text-primary-color transition-colors">+34 912 345 678</a>
                     </div>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4 text-white">Servicios</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-300 hover:text-primary-color transition-colors">Limpieza Dental</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-primary-color transition-colors">Empastes</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-primary-color transition-colors">Ortodoncia</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-primary-color transition-colors">Implantes</a></li>
-                        <li><a href="#" class="text-gray-300 hover:text-primary-color transition-colors">Blanqueamiento</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="text-lg font-semibold mb-4 text-white">Contacto</h4>
-                    <ul class="space-y-2 text-gray-300">
-                        <li class="flex items-center">
-                            <i class="fas fa-phone mr-2 text-primary-color"></i>
-                            +34 912 345 678
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-envelope mr-2 text-primary-color"></i>
-                            info@sonrisaperfecta.es
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-map-marker-alt mr-2 text-primary-color"></i>
-                            Calle Alcalá 123, Madrid
-                        </li>
-                    </ul>
+                    <div class="flex items-center">
+                        <i class="fas fa-envelope mr-3 text-primary-color"></i>
+                        <a href="mailto:info@sonrisaperfecta.es" class="hover:text-primary-color transition-colors">info@sonrisaperfecta.es</a>
+                    </div>
+                    <div class="flex items-center">
+                        <i class="fas fa-map-marker-alt mr-3 text-primary-color"></i>
+                        <span>Calle Alcalá 123, Madrid</span>
+                    </div>
                 </div>
             </div>
             
@@ -636,15 +567,6 @@
             observer.observe(el);
         });
         
-        // Navbar background on scroll
-        window.addEventListener('scroll', () => {
-            const navbar = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                navbar.classList.add('navbar-blur');
-            } else {
-                navbar.classList.remove('navbar-blur');
-            }
-        });
     </script>
 </body>
 </html>
