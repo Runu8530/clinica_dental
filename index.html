@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clínica Dental Sonrisa Perfecta - Tu Salud Bucal Nuestra Prioridad</title>
-    <meta name="description" content="Clínica Dental Sonrisa Perfecta ofrece servicios dentales de alta calidad con tecnología avanzada y un equipo profesional.">
-    
+    <title>Clínica Dental Sanident - Tu Salud Bucal Nuestra Prioridad</title>
+    <meta name="description"
+        content="Clínica Dental Sanident ofrece servicios dentales de alta calidad con tecnología avanzada y un equipo profesional.">
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Custom Styles -->
     <style>
         :root {
@@ -24,64 +28,69 @@
             --bg-color: #F8FAFB;
             --text-color: #2C3E50;
         }
-        
+
         body {
             font-family: 'Open Sans', sans-serif;
             background-color: var(--bg-color);
             color: var(--text-color);
         }
-        
-        h1, h2, h3, h4, h5, h6 {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-family: 'Inter', sans-serif;
         }
-        
+
         .hero-bg {
             background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
         }
-        
+
         .card-hover {
             transition: all 0.3s ease;
         }
-        
+
         .card-hover:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
-        
+
         .btn-primary {
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             transition: all 0.3s ease;
         }
-        
+
         .btn-primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 20px rgba(74, 144, 226, 0.3);
         }
-        
+
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
             transition: all 0.6s ease;
         }
-        
+
         .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
         }
-        
+
         .navbar-blur {
             background: #F3F4F6;
         }
-        
+
         nav {
             background: #F3F4F6;
         }
-        
+
         .nav-link {
             position: relative;
             transition: all 0.3s ease;
         }
-        
+
         .nav-link::after {
             content: '';
             position: absolute;
@@ -92,15 +101,15 @@
             background: var(--primary-color);
             transition: width 0.3s ease;
         }
-        
+
         .nav-link:hover::after {
             width: 100%;
         }
-        
+
         .nav-link:hover {
             transform: translateY(-2px);
         }
-        
+
         /* Mobile menu animation */
         #mobile-menu {
             max-height: 0;
@@ -109,51 +118,52 @@
             opacity: 0;
             display: block;
         }
-        
+
         @media (min-width: 768px) {
             #mobile-menu {
                 display: none;
             }
         }
-        
+
         #mobile-menu.menu-open {
             max-height: 500px;
             opacity: 1;
             transition: max-height 0.4s ease-in, opacity 0.4s ease-in;
         }
-        
+
         #mobile-menu .nav-link {
             transform: translateY(-10px);
             opacity: 0;
             transition: transform 0.3s ease-out, opacity 0.3s ease-out;
         }
-        
+
         #mobile-menu.menu-open .nav-link {
             transform: translateY(0);
             opacity: 1;
         }
-        
+
         #mobile-menu.menu-open .nav-link:nth-child(1) {
             transition-delay: 0.1s;
         }
-        
+
         #mobile-menu.menu-open .nav-link:nth-child(2) {
             transition-delay: 0.15s;
         }
-        
+
         #mobile-menu.menu-open .nav-link:nth-child(3) {
             transition-delay: 0.2s;
         }
-        
+
         #mobile-menu.menu-open .nav-link:nth-child(4) {
             transition-delay: 0.25s;
         }
-        
+
         #mobile-menu.menu-open .nav-link:nth-child(5) {
             transition-delay: 0.3s;
         }
     </style>
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 border-b border-gray-300">
@@ -161,16 +171,22 @@
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
                     <div class="flex-shrink-0">
-                        <h1 class="text-2xl font-bold text-primary-color">Sonrisa Perfecta</h1>
+                        <h1 class="text-2xl font-bold text-primary-color">Clínica Dental Sanident</h1>
                     </div>
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#inicio" class="nav-link text-gray-900 hover:text-primary-color px-3 py-2 text-sm font-medium">Inicio</a>
-                        <a href="#clinica" class="nav-link text-gray-900 hover:text-primary-color px-3 py-2 text-sm font-medium">Nuestra Clínica</a>
-                        <a href="#servicios" class="nav-link text-gray-900 hover:text-primary-color px-3 py-2 text-sm font-medium">Servicios</a>
-                        <a href="#consejos" class="nav-link text-gray-900 hover:text-primary-color px-3 py-2 text-sm font-medium">Consejos</a>
-                        <a href="contacto.html" class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-medium">Contacto</a>
+                        <a href="#inicio"
+                            class="nav-link text-gray-900 hover:text-primary-color px-3 py-2 text-sm font-medium">Inicio</a>
+                        <a href="#clinica"
+                            class="nav-link text-gray-900 hover:text-primary-color px-3 py-2 text-sm font-medium">Nuestra
+                            Clínica</a>
+                        <a href="#servicios"
+                            class="nav-link text-gray-900 hover:text-primary-color px-3 py-2 text-sm font-medium">Servicios</a>
+                        <a href="#consejos"
+                            class="nav-link text-gray-900 hover:text-primary-color px-3 py-2 text-sm font-medium">Consejos</a>
+                        <a href="contacto.html"
+                            class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-medium">Contacto</a>
                     </div>
                 </div>
                 <div class="md:hidden">
@@ -180,13 +196,15 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Mobile menu -->
         <div id="mobile-menu" class="md:hidden bg-gray-100 border-t border-gray-300">
             <div class="px-2 pt-2 pb-3 space-y-1">
                 <a href="#inicio" class="nav-link block px-3 py-2 text-gray-900 hover:text-primary-color">Inicio</a>
-                <a href="#clinica" class="nav-link block px-3 py-2 text-gray-900 hover:text-primary-color">Nuestra Clínica</a>
-                <a href="#servicios" class="nav-link block px-3 py-2 text-gray-900 hover:text-primary-color">Servicios</a>
+                <a href="#clinica" class="nav-link block px-3 py-2 text-gray-900 hover:text-primary-color">Nuestra
+                    Clínica</a>
+                <a href="#servicios"
+                    class="nav-link block px-3 py-2 text-gray-900 hover:text-primary-color">Servicios</a>
                 <a href="#consejos" class="nav-link block px-3 py-2 text-gray-900 hover:text-primary-color">Consejos</a>
                 <a href="contacto.html" class="nav-link block px-3 py-2 text-primary-color font-medium">Contacto</a>
             </div>
@@ -199,24 +217,28 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div class="text-white fade-in">
                     <h1 class="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                        Tu <span class="text-yellow-300">Sonrisa Perfecta</span>
+                        Tu <span class="text-yellow-300">Salud Dental</span>
                         <br>Nuestra Pasión
                     </h1>
                     <p class="text-xl mb-8 text-blue-100 leading-relaxed">
-                        En Clínica Dental Sonrisa Perfecta, combinamos tecnología de vanguardia con atención personalizada 
+                        En Clínica Dental Sanident, combinamos tecnología de vanguardia con atención
+                        personalizada
                         para ofrecerte los mejores tratamientos dentales. Tu salud bucal es nuestra prioridad.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="contacto.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#001f3f] hover:border-[#001f3f] transition-colors text-center">
+                        <a href="contacto.html"
+                            class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#001f3f] hover:border-[#001f3f] transition-colors text-center">
                             Agendar Cita
                         </a>
-                        <a href="#clinica" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#001f3f] hover:border-[#001f3f] transition-colors text-center">
+                        <a href="#clinica"
+                            class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-[#001f3f] hover:border-[#001f3f] transition-colors text-center">
                             Conocer Más
                         </a>
                     </div>
                 </div>
                 <div class="fade-in">
-                    <img src="resources/hero-clinic.jpg" alt="Clínica Dental Sonrisa Perfecta" class="rounded-2xl shadow-2xl w-full h-auto">
+                    <img src="resources/hero-clinic.jpg" alt="Clínica Dental Sanident"
+                        class="rounded-2xl shadow-2xl w-full h-auto">
                 </div>
             </div>
         </div>
@@ -228,21 +250,21 @@
             <div class="text-center mb-16 fade-in">
                 <h2 class="text-4xl font-bold text-gray-900 mb-4">Nuestra Clínica</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    En Clínica Dental Sonrisa Perfecta, hemos creado un espacio moderno y acogedor 
+                    En Clínica Dental Sanident, hemos creado un espacio moderno y acogedor
                     donde la tecnología de punta se combina con la atención humana que te mereces.
                 </p>
             </div>
-            
+
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
                 <div class="fade-in">
                     <h3 class="text-3xl font-bold mb-6 text-gray-900">Tecnología de Vanguardia</h3>
                     <p class="text-gray-600 mb-6 leading-relaxed">
-                        Nuestra clínica está equipada con la más avanzada tecnología en odontología, 
-                        incluyendo sistemas de radiografía digital de última generación, equipos de 
+                        Nuestra clínica está equipada con la más avanzada tecnología en odontología,
+                        incluyendo sistemas de radiografía digital de última generación, equipos de
                         diagnóstico por imagen 3D y herramientas de tratamiento mínimamente invasivas.
                     </p>
                     <p class="text-gray-600 mb-8 leading-relaxed">
-                        Creemos en la importancia de crear un ambiente cómodo y relajante para nuestros 
+                        Creemos en la importancia de crear un ambiente cómodo y relajante para nuestros
                         pacientes, por lo que hemos diseñado cada espacio pensando en tu bienestar y tranquilidad.
                     </p>
                     <div class="grid grid-cols-2 gap-4">
@@ -260,14 +282,13 @@
                 </div>
                 <div class="fade-in">
                     <div class="relative">
-                        <img src="https://kimi-web-img.moonshot.cn/img/img.freepik.com/9e9e61f437d3e724137078c3bb82e303703f8408.jpg" 
-                             alt="Recepción de la clínica" 
-                             class="rounded-2xl shadow-xl w-full h-80 object-cover">
+                        <img src="https://kimi-web-img.moonshot.cn/img/img.freepik.com/9e9e61f437d3e724137078c3bb82e303703f8408.jpg"
+                            alt="Recepción de la clínica" class="rounded-2xl shadow-xl w-full h-80 object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Video Tour Placeholder -->
             <div class="text-center mb-16 fade-in">
                 <h3 class="text-2xl font-bold text-gray-900 mb-8">Recorrido Virtual por Nuestra Clínica</h3>
@@ -281,33 +302,32 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Clinic Photos -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 fade-in">
                 <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden">
-                    <img src="https://kimi-web-img.moonshot.cn/img/310dentalcare.com/11414b390e6cdec086f54f36f58b3954148cd130.jpg" 
-                         alt="Sala de Tratamiento" 
-                         class="w-full h-64 object-cover">
+                    <img src="https://kimi-web-img.moonshot.cn/img/310dentalcare.com/11414b390e6cdec086f54f36f58b3954148cd130.jpg"
+                        alt="Sala de Tratamiento" class="w-full h-64 object-cover">
                     <div class="p-6">
                         <h4 class="text-xl font-semibold text-gray-900 mb-2">Sala de Tratamiento</h4>
-                        <p class="text-gray-600">Equipos modernos y cómodos para tu máxima tranquilidad durante los procedimientos.</p>
+                        <p class="text-gray-600">Equipos modernos y cómodos para tu máxima tranquilidad durante los
+                            procedimientos.</p>
                     </div>
                 </div>
-                
+
                 <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden">
-                    <img src="https://kimi-web-img.moonshot.cn/img/img.freepik.com/c7ffedf0e66be6d086aa0483fa8b71914aa6a739.jpg" 
-                         alt="Equipo de Rayos X" 
-                         class="w-full h-64 object-cover">
+                    <img src="https://kimi-web-img.moonshot.cn/img/img.freepik.com/c7ffedf0e66be6d086aa0483fa8b71914aa6a739.jpg"
+                        alt="Equipo de Rayos X" class="w-full h-64 object-cover">
                     <div class="p-6">
                         <h4 class="text-xl font-semibold text-gray-900 mb-2">Diagnóstico Digital</h4>
-                        <p class="text-gray-600">Tecnología de imagenología avanzada para diagnósticos precisos y rápidos.</p>
+                        <p class="text-gray-600">Tecnología de imagenología avanzada para diagnósticos precisos y
+                            rápidos.</p>
                     </div>
                 </div>
-                
+
                 <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden">
-                    <img src="https://kimi-web-img.moonshot.cn/img/cdn.prod.website-files.com/667c669c6732b6a1fda1242b307c7a2413a27793.jpg" 
-                         alt="Área de Espera" 
-                         class="w-full h-64 object-cover">
+                    <img src="https://kimi-web-img.moonshot.cn/img/cdn.prod.website-files.com/667c669c6732b6a1fda1242b307c7a2413a27793.jpg"
+                        alt="Área de Espera" class="w-full h-64 object-cover">
                     <div class="p-6">
                         <h4 class="text-xl font-semibold text-gray-900 mb-2">Área de Espera</h4>
                         <p class="text-gray-600">Un espacio cómodo y relajante para hacer tu espera agradable.</p>
@@ -323,11 +343,11 @@
             <div class="text-center mb-16 fade-in">
                 <h2 class="text-4xl font-bold text-gray-900 mb-4">Nuestros Servicios</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Ofrecemos una amplia gama de servicios dentales utilizando las técnicas más avanzadas 
+                    Ofrecemos una amplia gama de servicios dentales utilizando las técnicas más avanzadas
                     y materiales de la más alta calidad.
                 </p>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="card-hover bg-white rounded-2xl shadow-lg p-8 text-center fade-in">
                     <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -335,67 +355,67 @@
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-4">Limpieza Dental</h3>
                     <p class="text-gray-600">
-                        Limpieza profunda y profilaxis para mantener tus dientes sanos y brillantes. 
+                        Limpieza profunda y profilaxis para mantener tus dientes sanos y brillantes.
                         Prevención de caries y enfermedades periodontales.
                     </p>
                 </div>
-                
+
                 <div class="card-hover bg-white rounded-2xl shadow-lg p-8 text-center fade-in">
                     <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
                         <i class="fas fa-fill-drip text-3xl text-primary-color"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-4">Empastes</h3>
                     <p class="text-gray-600">
-                        Reparación de caries con materiales de última generación que se adaptan 
+                        Reparación de caries con materiales de última generación que se adaptan
                         perfectamente al color de tus dientes naturales.
                     </p>
                 </div>
-                
+
                 <div class="card-hover bg-white rounded-2xl shadow-lg p-8 text-center fade-in">
                     <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
                         <i class="fas fa-teeth text-3xl text-primary-color"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-4">Ortodoncia</h3>
                     <p class="text-gray-600">
-                        Corrección de la posición de los dientes con brackets tradicionales o 
+                        Corrección de la posición de los dientes con brackets tradicionales o
                         ortodoncia invisible para una sonrisa perfecta.
                     </p>
                 </div>
-                
+
                 <div class="card-hover bg-white rounded-2xl shadow-lg p-8 text-center fade-in">
                     <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
                         <i class="fas fa-tooth text-3xl text-primary-color"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-4">Implantes Dentales</h3>
                     <p class="text-gray-600">
-                        Solución permanente para la pérdida de dientes con implantes de titanio 
+                        Solución permanente para la pérdida de dientes con implantes de titanio
                         de alta calidad y máxima biocompatibilidad.
                     </p>
                 </div>
-                
+
                 <div class="card-hover bg-white rounded-2xl shadow-lg p-8 text-center fade-in">
                     <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
                         <i class="fas fa-snowflake text-3xl text-primary-color"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-4">Blanqueamiento</h3>
                     <p class="text-gray-600">
-                        Recupera el blanco natural de tus dientes con nuestros tratamientos 
+                        Recupera el blanco natural de tus dientes con nuestros tratamientos
                         de blanqueamiento profesional seguros y efectivos.
                     </p>
                 </div>
-                
+
                 <div class="card-hover bg-white rounded-2xl shadow-lg p-8 text-center fade-in">
                     <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
                         <i class="fas fa-tooth text-3xl text-primary-color"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-4">Endodoncia</h3>
                     <p class="text-gray-600">
-                        Tratamiento de conductos radiculares para salvar dientes dañados 
+                        Tratamiento de conductos radiculares para salvar dientes dañados
                         y aliviar el dolor de forma definitiva.
                     </p>
                 </div>
             </div>
-            
+
             <div class="text-center mt-12 fade-in">
                 <a href="servicios.html" class="btn-primary text-white px-8 py-4 rounded-lg font-semibold inline-block">
                     Ver Todos los Servicios
@@ -410,22 +430,23 @@
             <div class="text-center mb-16 fade-in">
                 <h2 class="text-4xl font-bold text-gray-900 mb-4">Consejos de Salud Bucal</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Mantén tu sonrisa saludable con estos consejos prácticos de nuestros expertos 
+                    Mantén tu sonrisa saludable con estos consejos prácticos de nuestros expertos
                     en salud dental.
                 </p>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <!-- Consejo 1 -->
                 <div class="card-hover bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 fade-in">
                     <div class="flex items-start space-x-4">
-                        <div class="w-12 h-12 bg-primary-color rounded-full flex items-center justify-center flex-shrink-0">
+                        <div
+                            class="w-12 h-12 bg-primary-color rounded-full flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-tooth text-white text-xl"></i>
                         </div>
                         <div class="flex-1">
                             <h3 class="text-xl font-bold text-gray-900 mb-3">Cepillado Correcto</h3>
                             <p class="text-gray-600 mb-4">
-                                Cepilla tus dientes durante 2-3 minutos, al menos dos veces al día. 
+                                Cepilla tus dientes durante 2-3 minutos, al menos dos veces al día.
                                 Usa movimientos circulares suaves y no olvides la lengua y las encías.
                             </p>
                             <div class="bg-white rounded-lg p-4 border-l-4 border-primary-color">
@@ -439,7 +460,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Consejo 2 -->
                 <div class="card-hover bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 fade-in">
                     <div class="flex items-start space-x-4">
@@ -449,7 +470,7 @@
                         <div class="flex-1">
                             <h3 class="text-xl font-bold text-gray-900 mb-3">Uso del Hilo Dental</h3>
                             <p class="text-gray-600 mb-4">
-                                Usa hilo dental diariamente para eliminar la placa y los restos de comida 
+                                Usa hilo dental diariamente para eliminar la placa y los restos de comida
                                 entre los dientes donde el cepillo no llega.
                             </p>
                             <div class="bg-white rounded-lg p-4 border-l-4 border-green-500">
@@ -463,17 +484,18 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Consejo 3 -->
                 <div class="card-hover bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl p-8 fade-in">
                     <div class="flex items-start space-x-4">
-                        <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0">
+                        <div
+                            class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-apple-alt text-white text-xl"></i>
                         </div>
                         <div class="flex-1">
                             <h3 class="text-xl font-bold text-gray-900 mb-3">Alimentación Saludable</h3>
                             <p class="text-gray-600 mb-4">
-                                Limita el consumo de azúcares y alimentos ácidos. Consume frutas, 
+                                Limita el consumo de azúcares y alimentos ácidos. Consume frutas,
                                 verduras y productos lácteos para mantener tus dientes fuertes.
                             </p>
                             <div class="bg-white rounded-lg p-4 border-l-4 border-purple-500">
@@ -487,17 +509,18 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Consejo 4 -->
                 <div class="card-hover bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-8 fade-in">
                     <div class="flex items-start space-x-4">
-                        <div class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
+                        <div
+                            class="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center flex-shrink-0">
                             <i class="fas fa-calendar-check text-white text-xl"></i>
                         </div>
                         <div class="flex-1">
                             <h3 class="text-xl font-bold text-gray-900 mb-3">Visitas Regulares</h3>
                             <p class="text-gray-600 mb-4">
-                                Visita a tu dentista cada 6 meses para chequeos y limpiezas profesionales. 
+                                Visita a tu dentista cada 6 meses para chequeos y limpiezas profesionales.
                                 La prevención es la clave para una sonrisa saludable.
                             </p>
                             <div class="bg-white rounded-lg p-4 border-l-4 border-orange-500">
@@ -512,7 +535,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="text-center mt-12 fade-in">
                 <a href="consejos.html" class="btn-primary text-white px-8 py-4 rounded-lg font-semibold inline-block">
                     Ver Todos los Consejos
@@ -533,59 +556,72 @@
                     <div class="space-y-6">
                         <!-- Phone -->
                         <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
+                            <div
+                                class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
                                 <i class="fas fa-phone text-white text-xl"></i>
                             </div>
                             <div>
                                 <h3 class="text-lg font-semibold text-white mb-1">Teléfono</h3>
-                                <a href="tel:+34912345678" class="text-blue-100 hover:text-yellow-300 transition-colors text-lg">
-                                    +34 912 345 678
+                                <a href="tel:+34927565426"
+                                    class="text-blue-100 hover:text-yellow-300 transition-colors text-lg block">
+                                    +34 927 565 426
+                                </a>
+                                <a href="tel:+34625186626"
+                                    class="text-blue-100 hover:text-yellow-300 transition-colors text-lg block">
+                                    +34 625 186 626
                                 </a>
                             </div>
                         </div>
-                        
+
                         <!-- Email -->
                         <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
+                            <div
+                                class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
                                 <i class="fas fa-envelope text-white text-xl"></i>
                             </div>
                             <div>
                                 <h3 class="text-lg font-semibold text-white mb-1">Email</h3>
-                                <a href="mailto:info@sonrisaperfecta.es" class="text-blue-100 hover:text-yellow-300 transition-colors text-lg">
-                                    info@sonrisaperfecta.es
+                                <a href="mailto:saludent12@gmail.com"
+                                    class="text-blue-100 hover:text-yellow-300 transition-colors text-lg">
+                                    saludent12@gmail.com
                                 </a>
                             </div>
                         </div>
-                        
+
                         <!-- Address -->
                         <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
+                            <div
+                                class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
                                 <i class="fas fa-map-marker-alt text-white text-xl"></i>
                             </div>
                             <div>
                                 <h3 class="text-lg font-semibold text-white mb-1">Dirección</h3>
                                 <p class="text-blue-100 text-lg">
-                                    Calle Alcalá 123<br>
-                                    Madrid, España
+                                    Los Naranjos 12<br>
+                                    Madrigal, Cáceres
                                 </p>
                             </div>
                         </div>
-                        
+
                         <!-- Social Media -->
                         <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
+                            <div
+                                class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
                                 <i class="fas fa-share-alt text-white text-xl"></i>
                             </div>
                             <div>
                                 <h3 class="text-lg font-semibold text-white mb-4">Síguenos</h3>
                                 <div class="flex space-x-4">
-                                    <a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
+                                    <a href="#"
+                                        class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
                                         <i class="fab fa-facebook-f text-white text-lg"></i>
                                     </a>
-                                    <a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
+                                    <a href="#"
+                                        class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
                                         <i class="fab fa-instagram text-white text-lg"></i>
                                     </a>
-                                    <a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
+                                    <a href="#"
+                                        class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
                                         <i class="fab fa-twitter text-white text-lg"></i>
                                     </a>
                                 </div>
@@ -593,19 +629,14 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Google Maps -->
                 <div class="fade-in">
                     <div class="rounded-2xl shadow-2xl overflow-hidden">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.475317741608!2d-3.7037901843280377!3d40.41677597936186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42287e23931a55%3A0x5c5f4f6f2c1a5a5a!2sCalle%20Alcal%C3%A1%2C%20Madrid!5e0!3m2!1ses!2ses!4v1234567890123!5m2!1ses!2ses"
-                            width="100%" 
-                            height="500" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade"
-                            class="w-full">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3049.74681621244!2d-5.367455899999965!3d40.1479231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd3feaf6a3defbe7%3A0xdcb4d8dd76f81f6b!2sC.%20Naranjos%2C%2012%2C%201%2C%2010480%20Madrigal%20de%20la%20Vera%2C%20C%C3%A1ceres!5e0!3m2!1ses!2ses!4v1766489411339!5m2!1ses!2ses"
+                            width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" class="w-full">
                         </iframe>
                     </div>
                 </div>
@@ -613,52 +644,25 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <h4 class="text-lg font-semibold mb-6 text-white">Contacto</h4>
-                <div class="flex flex-col items-center space-y-3 text-gray-300">
-                    <div class="flex items-center">
-                        <i class="fas fa-phone mr-3 text-primary-color"></i>
-                        <a href="tel:+34912345678" class="hover:text-primary-color transition-colors">+34 912 345 678</a>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-envelope mr-3 text-primary-color"></i>
-                        <a href="mailto:info@sonrisaperfecta.es" class="hover:text-primary-color transition-colors">info@sonrisaperfecta.es</a>
-                    </div>
-                    <div class="flex items-center">
-                        <i class="fas fa-map-marker-alt mr-3 text-primary-color"></i>
-                        <span>Calle Alcalá 123, Madrid</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center">
-                <p class="text-gray-400">
-                    © 2024 Clínica Dental Sonrisa Perfecta. Todos los derechos reservados.
-                </p>
-            </div>
-        </div>
-    </footer>
+
 
     <!-- JavaScript -->
     <script>
         // Mobile menu toggle with animation
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        
+
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('menu-open');
         });
-        
+
         // Close mobile menu when clicking on a link
         mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.remove('menu-open');
             });
         });
-        
+
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -672,13 +676,13 @@
                 }
             });
         });
-        
+
         // Fade in animation on scroll
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
         };
-        
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -686,11 +690,12 @@
                 }
             });
         }, observerOptions);
-        
+
         document.querySelectorAll('.fade-in').forEach(el => {
             observer.observe(el);
         });
-        
+
     </script>
 </body>
+
 </html>

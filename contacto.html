@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto - Clínica Dental Sonrisa Perfecta</title>
-    <meta name="description" content="Contacta con Clínica Dental Sonrisa Perfecta. Estamos aquí para ayudarte con tu salud bucal.">
-    
+    <title>Contacto - Clínica Dental Sanident</title>
+    <meta name="description"
+        content="Contacta con Clínica Dental Sanident. Estamos aquí para ayudarte con tu salud bucal.">
+
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Custom Styles -->
     <style>
         :root {
@@ -24,64 +28,69 @@
             --bg-color: #F8FAFB;
             --text-color: #2C3E50;
         }
-        
+
         body {
             font-family: 'Open Sans', sans-serif;
             background-color: var(--bg-color);
             color: var(--text-color);
         }
-        
-        h1, h2, h3, h4, h5, h6 {
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-family: 'Inter', sans-serif;
         }
-        
+
         .hero-bg {
             background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
         }
-        
+
         .card-hover {
             transition: all 0.3s ease;
         }
-        
+
         .card-hover:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
-        
+
         .btn-primary {
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             transition: all 0.3s ease;
         }
-        
+
         .btn-primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 10px 20px rgba(74, 144, 226, 0.3);
         }
-        
+
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
             transition: all 0.6s ease;
         }
-        
+
         .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
         }
-        
+
         .navbar-blur {
             background: #F3F4F6;
         }
-        
+
         nav {
             background: #F3F4F6;
         }
-        
+
         .nav-link {
             position: relative;
             transition: all 0.3s ease;
         }
-        
+
         .nav-link::after {
             content: '';
             position: absolute;
@@ -92,16 +101,17 @@
             background: var(--primary-color);
             transition: width 0.3s ease;
         }
-        
+
         .nav-link:hover::after {
             width: 100%;
         }
-        
+
         .nav-link:hover {
             transform: translateY(-2px);
         }
     </style>
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 border-b border-gray-300">
@@ -109,16 +119,22 @@
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
                     <div class="flex-shrink-0">
-                        <h1 class="text-2xl font-bold text-primary-color">Sonrisa Perfecta</h1>
+                        <h1 class="text-2xl font-bold text-primary-color">Clínica Dental Sanident</h1>
                     </div>
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="index.html" class="nav-link text-gray-900 hover:text-primary-color px-3 py-2 text-sm font-medium">Inicio</a>
-                        <a href="index.html#clinica" class="nav-link text-gray-900 hover:text-primary-color px-3 py-2 text-sm font-medium">Nuestra Clínica</a>
-                        <a href="servicios.html" class="nav-link text-gray-900 hover:text-primary-color px-3 py-2 text-sm font-medium">Servicios</a>
-                        <a href="index.html#consejos" class="nav-link text-gray-900 hover:text-primary-color px-3 py-2 text-sm font-medium">Consejos</a>
-                        <a href="contacto.html" class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-medium">Contacto</a>
+                        <a href="index.html"
+                            class="nav-link text-gray-900 hover:text-primary-color px-3 py-2 text-sm font-medium">Inicio</a>
+                        <a href="index.html#clinica"
+                            class="nav-link text-gray-900 hover:text-primary-color px-3 py-2 text-sm font-medium">Nuestra
+                            Clínica</a>
+                        <a href="servicios.html"
+                            class="nav-link text-gray-900 hover:text-primary-color px-3 py-2 text-sm font-medium">Servicios</a>
+                        <a href="index.html#consejos"
+                            class="nav-link text-gray-900 hover:text-primary-color px-3 py-2 text-sm font-medium">Consejos</a>
+                        <a href="contacto.html"
+                            class="btn-primary text-white px-4 py-2 rounded-lg text-sm font-medium">Contacto</a>
                     </div>
                 </div>
                 <div class="md:hidden">
@@ -128,14 +144,17 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- Mobile menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-gray-100 border-t border-gray-300">
             <div class="px-2 pt-2 pb-3 space-y-1">
                 <a href="index.html" class="nav-link block px-3 py-2 text-gray-900 hover:text-primary-color">Inicio</a>
-                <a href="index.html#clinica" class="nav-link block px-3 py-2 text-gray-900 hover:text-primary-color">Nuestra Clínica</a>
-                <a href="servicios.html" class="nav-link block px-3 py-2 text-gray-900 hover:text-primary-color">Servicios</a>
-                <a href="index.html#consejos" class="nav-link block px-3 py-2 text-gray-900 hover:text-primary-color">Consejos</a>
+                <a href="index.html#clinica"
+                    class="nav-link block px-3 py-2 text-gray-900 hover:text-primary-color">Nuestra Clínica</a>
+                <a href="servicios.html"
+                    class="nav-link block px-3 py-2 text-gray-900 hover:text-primary-color">Servicios</a>
+                <a href="index.html#consejos"
+                    class="nav-link block px-3 py-2 text-gray-900 hover:text-primary-color">Consejos</a>
                 <a href="contacto.html" class="nav-link block px-3 py-2 text-primary-color font-medium">Contacto</a>
             </div>
         </div>
@@ -149,7 +168,7 @@
                     <span class="text-yellow-300">Contáctanos</span>
                 </h1>
                 <p class="text-xl text-blue-100 max-w-3xl mx-auto">
-                    Estamos aquí para ayudarte con tu salud bucal. Ponte en contacto con nosotros 
+                    Estamos aquí para ayudarte con tu salud bucal. Ponte en contacto con nosotros
                     y agenda tu cita hoy mismo.
                 </p>
             </div>
@@ -168,59 +187,72 @@
                     <div class="space-y-6">
                         <!-- Phone -->
                         <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
+                            <div
+                                class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
                                 <i class="fas fa-phone text-white text-xl"></i>
                             </div>
                             <div>
                                 <h3 class="text-lg font-semibold text-white mb-1">Teléfono</h3>
-                                <a href="tel:+34912345678" class="text-blue-100 hover:text-yellow-300 transition-colors text-lg">
-                                    +34 912 345 678
+                                <a href="tel:+34927565426"
+                                    class="text-blue-100 hover:text-yellow-300 transition-colors text-lg block">
+                                    +34 927 565 426
+                                </a>
+                                <a href="tel:+34625186626"
+                                    class="text-blue-100 hover:text-yellow-300 transition-colors text-lg block">
+                                    +34 625 186 626
                                 </a>
                             </div>
                         </div>
-                        
+
                         <!-- Email -->
                         <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
+                            <div
+                                class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
                                 <i class="fas fa-envelope text-white text-xl"></i>
                             </div>
                             <div>
                                 <h3 class="text-lg font-semibold text-white mb-1">Email</h3>
-                                <a href="mailto:info@sonrisaperfecta.es" class="text-blue-100 hover:text-yellow-300 transition-colors text-lg">
-                                    info@sonrisaperfecta.es
+                                <a href="mailto:saludent12@gmail.com"
+                                    class="text-blue-100 hover:text-yellow-300 transition-colors text-lg">
+                                    saludent12@gmail.com
                                 </a>
                             </div>
                         </div>
-                        
+
                         <!-- Address -->
                         <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
+                            <div
+                                class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
                                 <i class="fas fa-map-marker-alt text-white text-xl"></i>
                             </div>
                             <div>
                                 <h3 class="text-lg font-semibold text-white mb-1">Dirección</h3>
                                 <p class="text-blue-100 text-lg">
-                                    Calle Alcalá 123<br>
-                                    Madrid, España
+                                    Los Naranjos 12<br>
+                                    Madrigal, Cáceres
                                 </p>
                             </div>
                         </div>
-                        
+
                         <!-- Social Media -->
                         <div class="flex items-start space-x-4">
-                            <div class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
+                            <div
+                                class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center flex-shrink-0">
                                 <i class="fas fa-share-alt text-white text-xl"></i>
                             </div>
                             <div>
                                 <h3 class="text-lg font-semibold text-white mb-4">Síguenos</h3>
                                 <div class="flex space-x-4">
-                                    <a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
+                                    <a href="#"
+                                        class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
                                         <i class="fab fa-facebook-f text-white text-lg"></i>
                                     </a>
-                                    <a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
+                                    <a href="#"
+                                        class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
                                         <i class="fab fa-instagram text-white text-lg"></i>
                                     </a>
-                                    <a href="#" class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
+                                    <a href="#"
+                                        class="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
                                         <i class="fab fa-twitter text-white text-lg"></i>
                                     </a>
                                 </div>
@@ -228,19 +260,14 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Google Maps -->
                 <div class="fade-in">
                     <div class="rounded-2xl shadow-2xl overflow-hidden">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.475317741608!2d-3.7037901843280377!3d40.41677597936186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42287e23931a55%3A0x5c5f4f6f2c1a5a5a!2sCalle%20Alcal%C3%A1%2C%20Madrid!5e0!3m2!1ses!2ses!4v1234567890123!5m2!1ses!2ses"
-                            width="100%" 
-                            height="500" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade"
-                            class="w-full">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3049.74681621244!2d-5.367455899999965!3d40.1479231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd3feaf6a3defbe7%3A0xdcb4d8dd76f81f6b!2sC.%20Naranjos%2C%2012%2C%201%2C%2010480%20Madrigal%20de%20la%20Vera%2C%20C%C3%A1ceres!5e0!3m2!1ses!2ses!4v1766489411339!5m2!1ses!2ses"
+                            width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade" class="w-full">
                         </iframe>
                     </div>
                 </div>
@@ -256,19 +283,25 @@
                 <div class="flex flex-col items-center space-y-3 text-gray-300">
                     <div class="flex items-center">
                         <i class="fas fa-phone mr-3 text-primary-color"></i>
-                        <a href="tel:+34912345678" class="hover:text-primary-color transition-colors">+34 912 345 678</a>
+                        <div class="flex flex-col">
+                            <a href="tel:+34927565426" class="hover:text-primary-color transition-colors">+34 927 565
+                                426</a>
+                            <a href="tel:+34625186626" class="hover:text-primary-color transition-colors">+34 625 186
+                                626</a>
+                        </div>
                     </div>
                     <div class="flex items-center">
                         <i class="fas fa-envelope mr-3 text-primary-color"></i>
-                        <a href="mailto:info@sonrisaperfecta.es" class="hover:text-primary-color transition-colors">info@sonrisaperfecta.es</a>
+                        <a href="mailto:saludent12@gmail.com"
+                            class="hover:text-primary-color transition-colors">saludent12@gmail.com</a>
                     </div>
                     <div class="flex items-center">
                         <i class="fas fa-map-marker-alt mr-3 text-primary-color"></i>
-                        <span>Calle Alcalá 123, Madrid</span>
+                        <span>Los Naranjos 12, Madrigal, Cáceres</span>
                     </div>
                 </div>
             </div>
-            
+
             <div class="border-t border-gray-800 mt-8 pt-8 text-center">
                 <p class="text-gray-400">
                     © 2024 Clínica Dental Sonrisa Perfecta. Todos los derechos reservados.
@@ -282,11 +315,11 @@
         // Mobile menu toggle
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        
+
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
-        
+
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -300,13 +333,13 @@
                 }
             });
         });
-        
+
         // Fade in animation on scroll
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
         };
-        
+
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -314,12 +347,12 @@
                 }
             });
         }, observerOptions);
-        
+
         document.querySelectorAll('.fade-in').forEach(el => {
             observer.observe(el);
         });
-        
+
     </script>
 </body>
-</html>
 
+</html>
